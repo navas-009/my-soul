@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Simulation</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: green; /* Green background */
+            color: white; /* White text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-family: 'Courier New', Courier, monospace; /* Hacking font style */
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Hacking in progress...</div>
+
+    <script>
+        // Function to show the final message
+        function showMessage() {
+            document.getElementById('message').innerText = "You are fooled";
+        }
+
+        // Set a timer for 30 seconds
+        setTimeout(() => {
+            showMessage();
+            // Close the window after 3 seconds
+            setTimeout(() => {
+                window.close();
+            }, 3000);
+        }, 30000);
+
+        // Request full screen
+        document.documentElement.requestFullscreen();
+    </script>
+</body>
+</html>
